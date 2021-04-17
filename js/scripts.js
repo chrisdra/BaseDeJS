@@ -1,0 +1,1 @@
+//alert('Hola Mundo'); //brota un mensaje de alerta en la pantalla web
