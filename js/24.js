@@ -37,7 +37,7 @@ for( let i = 0; i < carrito.length; i++){
 //////////////////////////////////////////////////////////////////////////////////
 //While Loop
 
-let i = 0; //Indice o valor inicial
+// let i = 0; //Indice o valor inicial
 
 // while(i<10){ //Condicion
 //     if(i % 2 === 0){
@@ -45,16 +45,24 @@ let i = 0; //Indice o valor inicial
 //     } else {
 //         console.log(`El numero ${i} es impar`);
 //     }
-//     i++; //Incremento
-// }
+// //     i++; //Incremento
+// // }
 
-while(i < carrito.length) {
-    console.log(carrito[i].nombre)
-    i++;
-}
+// while(i < carrito.length) {
+//     console.log(carrito[i].nombre)
+//     i++;
+// }
 
 //////////////////////////////////////////////////////////////////////////////////
 //Do While Loop
+
+let i = 100;
+
+do {
+    console.log(i);
+    i++;
+} while(i < 10);
+
 
 
 
