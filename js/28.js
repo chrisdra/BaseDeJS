@@ -15,17 +15,16 @@ const producto2 = new Producto('Monitor Curvo de 49', 800);
 const producto3 = new Producto('Laptop', 300);
 
 //Herencia
-
 class Libro extends Producto{
     constructor(nombre, precio, isbn){
-        this.nombre = nombre;
-        this.precio = precio;
+        super(nombre, precio);
         this.isbn = isbn;
+    }
+    formatearProducto(){
+        return `${super.formatearProducto()} y su ISBN es %{this.isbn}`;
     }
 }
 
 const libro = new Libro('JavaScript la revolucion', 120, '132154487548746548');
-console.log(libro);
-
-console.log(producto2);
-console.log(producto3);
+console.log(libro.formatearProducto());
+console.log(producto2.formatearProducto());
