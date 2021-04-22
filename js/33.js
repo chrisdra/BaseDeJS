@@ -1,19 +1,22 @@
-function obtenerEmpleados() {
+async function obtenerEmpleados() {
 
     const archivo = 'empleados.json';
     
-    fetch(archivo)
-        .then( resultado => resultado.json())
-        .then( datos => {
+    // fetch(archivo)
+    //     .then( resultado => resultado.json())
+    //     .then( datos => {
 
-            const { empleados } = datos;
+    //         const { empleados } = datos;
 
-            empleados.forEach( empleado => {
+    //         empleados.forEach( empleado => {
                 
-                console.log(empleado.id);
-                console.log(empleado.nombre);
-                console.log(empleado.puesto);
-            })
-        })
+    //             console.log(empleado.id);
+    //             console.log(empleado.nombre);
+    //             console.log(empleado.puesto);
+    //         })
+    //     })
+    const resultado = await fetch(archivo);
+    const datos = await resultado.json();
+    console.log(datos);
 }
 obtenerEmpleados();
